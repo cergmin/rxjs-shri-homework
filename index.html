@@ -110,8 +110,8 @@
                 })
             );
             const getApiPromiseOnInputChange$ = getInputTextOnChange$.pipe(
-                rxjs.operators.map((e) => {
-                    return getApiResponse(e.target.value);
+                rxjs.operators.map((inputText) => {
+                    return getApiResponse(inputText);
                 })
             );
             const clearFields$ = rxjs.fromEvent(clearButton, "click");
